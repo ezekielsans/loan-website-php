@@ -38,27 +38,28 @@
       </div>
  
       <!-- loan-calc -->
-      <div class="col-md-7 col-lg-7 p-5   bg-body-tertiary border rounded-3">
+      <div class="row-md-7 row-lg-7 p-5   bg-body-tertiary border rounded-3">
+      <div class="col-md-8">
+
         <h4 class="mb-3">Explore Our Loan Packages</h4>
-        <form class="needs-validation" novalidate="">
-          <div class="row g-3">
-            <div class="col-12">
+        <form action="">
+    
+          <div class="form-group">
               <label for="email" class="form-label">How much do you need? </label>
               <input type="text" class="form-control" id="loanValue" placeholder="I need to borrow.." ></input>
-             
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
 
-            <div class="col-12">
+            <div class="form-group">
               <label for="range" class="form-label">P 3,000 - P 20,000</label>
             <input type="range" class="form-range" min="3000" max="20000" id="loanRange">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
-            <div class="col-12">
+            <div class="form-group">
               <label for="country" class="form-label mb-2">Loan will be used for?</label>
               <select class="form-select" id="country" required="">
                 <option value="">Choose...</option>
@@ -71,7 +72,7 @@
                 Please select a valid country.
               </div>
             </div> 
-            <div class="col-12">
+            <div class="form-group">
               <label for="country" class="form-label mb-2">I will pay it within:</label>
               <select class="form-select" id="country" required="">
                 <option value="">Choose...</option>
@@ -88,8 +89,14 @@
           </div>
           
 
-          <div class="row g-3 mt-2">
-          <div class="col-md-5">
+          <div class="form-group">
+          <div class="row">
+          <div class="col-md-4">
+              <label for="country" class="form-label">Country</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            
+            <div class="col-md-4">
               <label for="country" class="form-label">Country</label>
               <input type="email" class="form-control" id="email" placeholder="you@example.com">
             </div>
@@ -98,13 +105,10 @@
               <label for="country" class="form-label">Country</label>
               <input type="email" class="form-control" id="email" placeholder="you@example.com">
             </div>
-            
-            <div class="col-md-5">
-              <label for="country" class="form-label">Country</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
             </div>
-            </div>
-          <button class="w-100 btn btn-primary btn-lg mt-5" type="submit">Apply Now</button>
+          </div>
+          <button class="w-100 btn-block btn btn-primary btn-lg mt-5" type="submit">Apply Now</button>
+        </div>
         </div>
         
 
