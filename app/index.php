@@ -32,34 +32,41 @@
 
 <main>
 <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4  mt-5">
-      <div class="pricing-header p-3 pb-md-3 mx-auto text-start">
-        <h1 class="display-4 fw-normal">Need Money?</h1>
-        <p class="fs-5 col-md-11 text-muted">Be One a part of us and have more</p>
+
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+        <button class="btn btn-primary btn-lg" type="button">Example button</button>
       </div>
+    </div>
+ 
  
       <!-- loan-calc -->
-      <div class="row-md-7 row-lg-7 p-5   bg-body-tertiary border rounded-3">
-      <div class="col-md-8">
+     
 
+
+
+      <div class="col-md-5 col-lg-5 p-5 bg-body-tertiary border rounded-3">
         <h4 class="mb-3">Explore Our Loan Packages</h4>
         <form action="">
     
-          <div class="form-group">
+        <div class="row g-3">
+        <div class="col-12">
               <label for="email" class="form-label">How much do you need? </label>
               <input type="text" class="form-control" id="loanValue" placeholder="I need to borrow.." ></input>
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
-
-            <div class="form-group">
+            <div class="col-12">
               <label for="range" class="form-label">P 3,000 - P 20,000</label>
             <input type="range" class="form-range" min="3000" max="20000" id="loanRange">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
-            <div class="form-group">
+            <div class="col-12">
               <label for="country" class="form-label mb-2">Loan will be used for?</label>
               <select class="form-select" id="country" required="">
                 <option value="">Choose...</option>
@@ -72,42 +79,38 @@
                 Please select a valid country.
               </div>
             </div> 
-            <div class="form-group">
+            <div class="col-12">
               <label for="country" class="form-label mb-2">I will pay it within:</label>
-              <select class="form-select" id="country" required="">
+              <select class="form-select" id="payment_date" required="">
                 <option value="">Choose...</option>
                 <option>3 months</option>
                 <option>6 months</option>
                 <option>1 year</option>
                 <option>2 years</option>
-               
               </select>
               <div class="invalid-feedback">
                 Please select a valid country.
               </div>
             </div>
-          </div>
+       
           
 
-          <div class="form-group">
-          <div class="row">
-          <div class="col-md-4">
-              <label for="country" class="form-label">Country</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="country" class="form-label">Interest</label>
+              <input type="text" class="form-control" id="interest" disabled>
+             
             </div>
             
-            <div class="col-md-4">
-              <label for="country" class="form-label">Country</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="col-md-6">
+              <label for="country" class="form-label">Processing Fee</label>
+              <input type="text" class="form-control" id="interest" disabled>
             </div>
-            
-            <div class="col-md-5">
-              <label for="country" class="form-label">Country</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
-            </div>
+          
             </div>
           </div>
           <button class="w-100 btn-block btn btn-primary btn-lg mt-5" type="submit">Apply Now</button>
+        </div>
         </div>
         </div>
         
@@ -192,65 +195,10 @@
 
     </div>
   </div>
-  <div class="container">
-  <footer class="py-5">
-    <div class="row">
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-5 offset-md-1 mb-3">
-        <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of what's new and exciting from us.</p>
-          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-            <button class="btn btn-primary" type="button">Subscribe</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© 2024 Company, Inc. All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
-    </div>
+  <footer class="container mt-5">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2017–2024 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
   </footer>
-</div>
 </main>
 
   </main>
