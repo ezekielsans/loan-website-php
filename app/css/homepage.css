@@ -20,7 +20,8 @@ color: #000;
   
 #contact-us{
 
-background-color:#eed202;
+background-color:	#000000;
+color: 	#FFFFFF;
 border-radius: 1rem;
 padding: 1rem 1rem;
 text-decoration: none;
@@ -29,8 +30,8 @@ text-decoration: none;
 
   #contact-us:hover{
 
-    background-color: rgb(58, 58, 255);
-    color: #eee;
+    background-color: #ffff33;
+    color: 	#000000;
     border-radius: 1rem;
     padding: 1rem 1rem;
    
