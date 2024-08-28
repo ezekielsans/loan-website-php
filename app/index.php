@@ -99,7 +99,6 @@
             <div class="col-md-6">
               <label for="country" class="form-label">Interest</label>
               <input type="text" class="form-control" id="interest" disabled>
-             
             </div>
             
             <div class="col-md-6">
@@ -107,6 +106,13 @@
               <input type="text" class="form-control" id="processing_fee" disabled>
             </div>
           
+            </div>
+
+
+            <div class="col-12">
+              <label for="email" class="form-label">Total Repayment</label>
+              <input type="text" class="form-control" id="total_repayment" disabled></input>
+              
             </div>
           </div>
           <button class="w-100 btn-block btn btn-primary btn-lg mt-5" type="submit">Apply Now</button>
