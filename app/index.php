@@ -104,7 +104,7 @@
             
             <div class="col-md-6">
               <label for="country" class="form-label">Processing Fee</label>
-              <input type="text" class="form-control" id="interest" disabled>
+              <input type="text" class="form-control" id="processing_fee" disabled>
             </div>
           
             </div>
