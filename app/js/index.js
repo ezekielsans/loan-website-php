@@ -19,24 +19,19 @@ total_repayment();
 range.addEventListener('input', () => {
     validateAndSyncRange();
     updateCalculations();
-   
 });
 
 // Event listener for typing in the input field
 currentRange.addEventListener('input', () => {
     validateAndSyncInput();
     updateCalculations();
-
 });
+
+
 
 // // Validate and synchronize the input field value with the range slider
 function validateAndSyncInput() {
     let value = parseFloat(currentRange.value);
-
-//     // Ensure the input is within the set boundaries
-//     if (value < 3000) value = 3000;
-//     if (value > 20000) value = 20000;
-
     currentRange.value = value;  // Adjust if out of bounds
     range.value = value;         // Sync slider with the input
 }
