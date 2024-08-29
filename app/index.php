@@ -98,12 +98,12 @@
             <div class="row gy-3">
             <div class="col-md-6">
               <label for="country" class="form-label">Interest</label>
-              <input type="text" class="form-control" id="interest" disabled>
+              <input type="text" class="form-control" id="interest" readonly>
             </div>
             
             <div class="col-md-6">
               <label for="country" class="form-label">Processing Fee</label>
-              <input type="text" class="form-control" id="processing_fee" disabled>
+              <input type="text" class="form-control" id="processing_fee" readonly>
             </div>
           
             </div>
@@ -111,7 +111,7 @@
 
             <div class="col-12">
               <label for="email" class="form-label">Total Repayment</label>
-              <input type="text" class="form-control" id="total_repayment" disabled></input>
+              <input type="text" class="form-control" id="total_repayment" readonly></input>
               
             </div>
           </div>
