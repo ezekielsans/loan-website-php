@@ -1,34 +1,32 @@
-<?php 
+<?php
 require_once '../controller/dbConn.php';
 
-
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['apply_now'])) {
-  // Fetch data from the form
-  $firstName = $_POST['firstName'];
-  $lastName = $_POST['lastName'];
-  $email = $_POST['email'];
-  $contactNumber = $_POST['contactNumber'];
-  $gender = $_POST['gender'];
 
-  // Insert data into the database
-  $openDb->insertApplicantDetails($firstName, $lastName, $email, $contactNumber, $gender);
+    // Fetch data from the form
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $contactNumber = $_POST['contactNumber'];
+    $gender = $_POST['gender'];
 
-
+    // Insert data into the database
+    try {
+        $openDb->insertApplicantDetails($firstName, $lastName, $email, $contactNumber, $gender);
+        echo "Data inserted successfully.";
+    } catch (Exception $e) {
+        echo "Error inserting data: " . $e->getMessage();
+    }
 
     // Debug: Print the input data
-    // echo "<pre>";
-    // print_r($_POST);
-    // echo "</pre>";
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
 }
-
-
 
 $result = $openDb->getUsers();
 
-
-//print_r($result);
+print_r($result);
 ?>
 
 <!doctype html>
@@ -79,7 +77,7 @@ $result = $openDb->getUsers();
       <!-- loan-calc -->
       <div class="col-md-5 col-lg-5 p-5 bg-body-tertiary border rounded-3">
         <h4 class="mb-3">Explore Our Loan Packages</h4>
-        <form action="">
+        <form method="post" action="">
 
         <div class="row g-3">
         <div class="col-12">
@@ -130,15 +128,11 @@ $result = $openDb->getUsers();
               <label for="country" class="form-label">Interest</label>
               <input type="text" class="form-control" id="interest" name="interest" readonly>
             </div>
-
             <div class="col-md-6">
               <label for="country" class="form-label">Processing Fee</label>
               <input type="text" class="form-control" id="processing_fee" name="processing_fee" readonly>
             </div>
-
             </div>
-
-
             <div class="col-12">
               <label for="email" class="form-label">Total Repayment</label>
               <input type="text" class="form-control" id="total_repayment" name="total_repayment" readonly></input>
@@ -146,15 +140,8 @@ $result = $openDb->getUsers();
             </div>
           </div>
           <button class="w-100 btn-block btn btn-primary btn-lg mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">Apply Now</button>
-
-
-
-
-
 </div>
         </div>
-
-
       </div>
 
 
@@ -162,10 +149,10 @@ $result = $openDb->getUsers();
 <div class="container px-4 py-5" id="hanging-icons">
     <h2 class="pb-2 border-bottom text-center">3 Easy steps to Get your loan and start Gaining on your share capital</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 mt-5">
-     
+
     <div class="col d-flex align-items-center">
         <div class="text-center">
-        <svg fill="#000000" width="72px" height="72px" viewBox="0 0 16 16" id="register-16px" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="Path_184" data-name="Path 184" d="M57.5,41a.5.5,0,0,0-.5.5V43H47V31h2v.5a.5.5,0,0,0,.5.5h5a.5.5,0,0,0,.5-.5V31h2v.5a.5.5,0,0,0,1,0v-1a.5.5,0,0,0-.5-.5H55v-.5A1.5,1.5,0,0,0,53.5,28h-3A1.5,1.5,0,0,0,49,29.5V30H46.5a.5.5,0,0,0-.5.5v13a.5.5,0,0,0,.5.5h11a.5.5,0,0,0,.5-.5v-2A.5.5,0,0,0,57.5,41ZM50,29.5a.5.5,0,0,1,.5-.5h3a.5.5,0,0,1,.5.5V31H50Zm11.854,4.646-2-2a.5.5,0,0,0-.708,0l-6,6A.5.5,0,0,0,53,38.5v2a.5.5,0,0,0,.5.5h2a.5.5,0,0,0,.354-.146l6-6A.5.5,0,0,0,61.854,34.146ZM54,40V38.707l5.5-5.5L60.793,34.5l-5.5,5.5Zm-2,.5a.5.5,0,0,1-.5.5h-2a.5.5,0,0,1,0-1h2A.5.5,0,0,1,52,40.5Zm0-3a.5.5,0,0,1-.5.5h-2a.5.5,0,0,1,0-1h2A.5.5,0,0,1,52,37.5ZM54.5,35h-5a.5.5,0,0,1,0-1h5a.5.5,0,0,1,0,1Z" transform="translate(-46 -28)"></path> </g></svg> 
+        <svg fill="#000000" width="72px" height="72px" viewBox="0 0 16 16" id="register-16px" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="Path_184" data-name="Path 184" d="M57.5,41a.5.5,0,0,0-.5.5V43H47V31h2v.5a.5.5,0,0,0,.5.5h5a.5.5,0,0,0,.5-.5V31h2v.5a.5.5,0,0,0,1,0v-1a.5.5,0,0,0-.5-.5H55v-.5A1.5,1.5,0,0,0,53.5,28h-3A1.5,1.5,0,0,0,49,29.5V30H46.5a.5.5,0,0,0-.5.5v13a.5.5,0,0,0,.5.5h11a.5.5,0,0,0,.5-.5v-2A.5.5,0,0,0,57.5,41ZM50,29.5a.5.5,0,0,1,.5-.5h3a.5.5,0,0,1,.5.5V31H50Zm11.854,4.646-2-2a.5.5,0,0,0-.708,0l-6,6A.5.5,0,0,0,53,38.5v2a.5.5,0,0,0,.5.5h2a.5.5,0,0,0,.354-.146l6-6A.5.5,0,0,0,61.854,34.146ZM54,40V38.707l5.5-5.5L60.793,34.5l-5.5,5.5Zm-2,.5a.5.5,0,0,1-.5.5h-2a.5.5,0,0,1,0-1h2A.5.5,0,0,1,52,40.5Zm0-3a.5.5,0,0,1-.5.5h-2a.5.5,0,0,1,0-1h2A.5.5,0,0,1,52,37.5ZM54.5,35h-5a.5.5,0,0,1,0-1h5a.5.5,0,0,1,0,1Z" transform="translate(-46 -28)"></path> </g></svg>
           <h3 class="mt-3 fs-4 text-body-emphasis">Step 1: Register online</h3>
         </div>
       </div>
@@ -200,7 +187,7 @@ $result = $openDb->getUsers();
               <li>0.03 interest gain on share capital</li>
               <li>Share Capital gain guaranteed</li>
               <li>Rebate when cancelled</li>
-              
+
             </ul>
 
           </div>
@@ -246,14 +233,14 @@ $result = $openDb->getUsers();
 <!-- Testimonial Part -->
 <div class="container px-4 py-5" id="featured-3">
   <h2 class="pb-2 text-center">Testimonials From People We've Helped</h2>
-  <p class="pb-2 text-muted text-center">These are honest feedbacks from our loyal members, 
+  <p class="pb-2 text-muted text-center">These are honest feedbacks from our loyal members,
     that we offered services throughout the years</p>
   <div class="row mt-5">
     <div class="col-lg-4 mb-4 ">
       <div class="card p-4 text-start rounded-5 h-100 ">
-       
+
         <img class="rounded-circle" width="100" height="100" src="../../assets/test_1.png" alt="" srcset="">
-        
+
       <!-- <svg class="bd-placeholder-img rounded-circle mx-auto d-block" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"> -->
           <title>Placeholder</title>
           <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
@@ -286,7 +273,7 @@ $result = $openDb->getUsers();
       <div class="card p-4 rounded-5 h-100 d-flex align-items-start">
         <div class="d-flex"></div>
         <!-- <svg class="bd-placeholder-img rounded-circle mx-auto d-block" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"> -->
-        <img class="rounded-circle" width="100" height="100" src="../../assets/test_2.png" alt="" srcset="">  
+        <img class="rounded-circle" width="100" height="100" src="../../assets/test_2.png" alt="" srcset="">
         <title>Placeholder</title>
           <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
         </svg>
@@ -314,36 +301,37 @@ $result = $openDb->getUsers();
 
     <!-- Right Column: Form -->
     <div class="col-md-6">
-      <form class="needs-validation" novalidate method="post">
-        <!-- First Name Field -->
+    <form method="post" action="">
+      <!-- class="needs-validation" novalidate  -->
+
         <div class="mb-3">
           <label for="firstName" class="form-label">First name</label>
           <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name.." required>
           <div class="invalid-feedback">Valid first name is required.</div>
         </div>
 
-        <!-- Last Name Field -->
+
         <div class="mb-3">
           <label for="lastName" class="form-label">Last name</label>
           <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name.." required>
           <div class="invalid-feedback">Valid last name is required.</div>
         </div>
 
-        <!-- Email Field -->
+
         <div class="mb-3">
           <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
           <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
           <div class="invalid-feedback">Please enter a valid email address.</div>
         </div>
 
-        <!-- Contact Number Field -->
+
         <div class="mb-3">
           <label for="contactNumber" class="form-label">Contact Number</label>
           <input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="Enter Mobile Number..">
           <div class="invalid-feedback">Please enter your Contact Number.</div>
         </div>
 
-        <!-- Gender Selection -->
+
         <div class="mb-3">
           <label for="gender" class="form-label">Gender</label>
           <select class="form-select" id="gender" name="gender" required>
@@ -381,40 +369,22 @@ $result = $openDb->getUsers();
       <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
     </div>
   </div> -->
-
-
-
-
     </div>
   </div>
-
-
-  <!-- option 1 footer -->
-  <!-- <footer class="container mt-5">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>© 2024 San Diego Loan. All Rights Reserved. <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-  </footer>  -->
-
-
-  
- 
-
-
-  </main>
-
-
+</main>
 </div>
+<!-- option 1 footer -->
 <div class="container">
   <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 mt-5">
     <div class="col mb-3">
       <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
       </a>
-     
+
       <p class="text-body-secondary">© 2024 San Diego Loan</p>
-      
+
     </div>
-    
+
 
     <div class="col mb-3">
     </div>

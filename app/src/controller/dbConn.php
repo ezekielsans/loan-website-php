@@ -21,20 +21,6 @@ class DbConnection
 
     }
 
-    //try mysqli approach
-    // public function openConnection()
-    // {
-    //     $server = "mysql:host=db";
-    //     $dbname = "email_server";
-    //     $user = "admin";
-    //     $password = "password";
-    //     //$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC);
-
-    //     $conn = new mysqli($server, $user, $password);
-    //     if ($conn->connect_error) {
-    //         die("Connection failed: " . $conn->connect_error);
-    //     }
-    // }
 
     public function closeConnection()
     {
@@ -65,13 +51,15 @@ class DbConnection
             $this->openConnection();
             $statement = $this->conn->prepare('INSERT INTO applicants(`first_name`, `last_name`, `email`, `contact_number`, `gender`) VALUES (?,?,?,?,?)');
             $statement->execute([$firstName, $lastName, $email, $contactNumber, $gender]);
-            header('Location: homepage.php');
+          
             echo "New record created successfully";
+            header('Location: homepage.php');
         } catch (PDOException $e) {
 
             echo $statement . "<br>" . $e->getMessage();
 
         }
+   
 
     }
 
