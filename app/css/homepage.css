@@ -1,18 +1,31 @@
+:root{
+--main-color:#42A5F5;
+--secondary-color:#FFF9C4;
+--tertiary-color: #FAFAFA;
+
+
+
+
+
+
+}
+
 body {
     background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+ background-color: #42A5F5;
   }
   
 
   .navbar .nav-link{
 
-color: #000;
+color:var(--main-color);
 
   }
 
   
   
   .navbar .nav-link:hover{
-    color: #eed202; /* Default text color */
+    color: var(--main-color); /* Default text color */
     transition: background-color 0.3s, color 0.3s;
     text-decoration: underline;
   }
@@ -20,7 +33,7 @@ color: #000;
   
 #contact-us{
 
-background-color:	#000000;
+background-color:	var(--main-color);
 color: 	#FFFFFF;
 border-radius: 1rem;
 padding: 1rem 1rem;
@@ -30,7 +43,7 @@ text-decoration: none;
 
   #contact-us:hover{
 
-    background-color: #ffff33;
+    background-color:var(--main-color);
     color: 	#000000;
     border-radius: 1rem;
     padding: 1rem 1rem;

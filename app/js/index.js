@@ -29,18 +29,19 @@ currentRange.addEventListener('input', () => {
 
 
 
-// // Validate and synchronize the input field value with the range slider
+// Validate and synchronize the input field value with the range slider
 function validateAndSyncInput() {
     let value = parseFloat(currentRange.value);
     currentRange.value = value;  // Adjust if out of bounds
     range.value = value;         // Sync slider with the input
 }
 
-// // Validate and synchronize the range slider value with the input field
+
+// Validate and synchronize the range slider value with the input field
 function validateAndSyncRange() {
     let value = range.valueAsNumber;
 
-//     // Ensure the slider respects the boundaries
+ // Ensure the slider respects the boundaries
 //     if (value < 3000) value = 3000;
 //     if (value > 20000) value = 20000;
 
