@@ -1,0 +1,70 @@
+:root {
+    --main-color: #00796B;
+    --accent-color: #B2DFDB;
+    --secondary-accent-color: #E0E0E0;
+    --highlights-color: #FFC107;
+    --font-color: #181717;
+    --tertiary-color: #FAFAFA;
+}
+
+
+
+#body {
+    background-color: var(--secondary-color);
+}
+
+.nav .nav-link {
+    color: var(--font-color);
+    cursor: pointer;
+
+}
+
+
+.nav .nav-link:hover {
+    color: var(--highlights-color);
+    /* Default text color */
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+
+
+#contact-us {
+
+    background-color: var(--main-color);
+    color: var(--tertiary-color);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    text-decoration: none;
+}
+
+
+#contact-us:hover {
+
+    background-color: var(--highlights-color);
+    color: var(--tertiary-color);
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+
+}
+
+
+#apply-now {
+
+    background-color: var(--main-color);
+    color: var(--tertiary-color);
+   width: 100%;
+    text-decoration: none;
+    border-color: none;
+}
+
+
+#apply-now:hover {
+
+    background-color: var(--highlights-color);
+    color: var(--tertiary-color);
+    transition: background-color 0.3s, color 0.3s;
+    
+
+}

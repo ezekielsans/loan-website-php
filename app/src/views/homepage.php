@@ -19,45 +19,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['apply_now'])) {
     }
 
     // Debug: Print the input data
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($_POST);
+    // echo "</pre>";
 }
 
 $result = $openDb->getUsers();
 
-print_r($result);
+//print_r($result);
 ?>
 
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
+ 
+    <!--CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/assets/hand-hold-bank-building-finance.png" type="image/gif" sizes="16x16">
+   
     <title>San Diego Loan</title>
   </head>
-  <body>
+  <body 
+  id="body">
 
     <div class="container py-3">
   <header>
-    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4">
+    <div class="container-fluid d-flex justify-content-between align-items-center w-100 mb-4">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
-        <span class="fs-4">San Diego Loan</span>
+      <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10.24 -10.24 52.48 52.48" xml:space="preserve" width="70px" height="70px" fill="#FFC107" stroke="#FFC107"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"><path transform="translate(-10.24, -10.24), scale(3.28)" fill="#00796B" d="M9.166.33a2.25 2.25 0 00-2.332 0l-5.25 3.182A2.25 2.25 0 00.5 5.436v5.128a2.25 2.25 0 001.084 1.924l5.25 3.182a2.25 2.25 0 002.332 0l5.25-3.182a2.25 2.25 0 001.084-1.924V5.436a2.25 2.25 0 00-1.084-1.924L9.166.33z" strokewidth="0"></path></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.128"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#FFC107;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} </style> <path d="M28.5,5.7l-11-5.6c-0.3-0.1-0.6-0.1-0.9,0l-11,5.6C5.2,5.9,5,6.2,5,6.6V9c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V6.6 C29,6.2,28.8,5.9,28.5,5.7z"></path> <path d="M29.9,16.5C29.7,16.2,29.4,16,29,16c-2.2,0-4.3,1-5.6,2.8L22.5,20c-1.1,1.3-2.8,2-4.5,2h-3c-0.6,0-1-0.4-1-1s0.4-1,1-1h1.9 c1.6,0,3.1-1.3,3.1-2.9c0,0,0-0.1,0-0.1c0-0.5-0.5-1-1-1h-6.1c-3.6,0-6.5,1.6-8.1,4.2l-2.7,4.2c-0.2,0.3-0.2,0.7,0,1l3,5 c0.1,0.2,0.4,0.4,0.6,0.5c0.1,0,0.1,0,0.2,0c0.2,0,0.4-0.1,0.6-0.2c3.8-2.5,8.2-3.8,12.7-3.8c3.3,0,6.3-1.8,7.9-4.7l2.7-4.8 C30,17.2,30,16.8,29.9,16.5z"></path> <path d="M26,14.5V12c0-0.6-0.4-1-1-1h-2c-0.6,0-1,0.4-1,1v5.3C23.1,16,24.4,15.1,26,14.5z"></path> <path d="M19,14v-2c0-0.6-0.4-1-1-1h-2c-0.6,0-1,0.4-1,1v2H19z"></path> <path d="M12,14.1V12c0-0.6-0.4-1-1-1H9c-0.6,0-1,0.4-1,1v3C9.2,14.5,10.6,14.2,12,14.1z"></path> </g></svg>
+        <h3 class="fs-3 mx-2">San Diego Loan</h3>
       </a>
 
-      <nav class="navbar d-inline-flex mt-2 mt-md-0 ms-md-auto"  id="navbar">
-        <a class="me-3 py-2 nav-link"  href="#">What's New?</a>
-        <a class="me-3 py-2 nav-link" href="#">Services</a>
-        <a class="me-3 py-2 nav-link" href="#">About Us</a>
-        <a class="py-2 contact-us" id="contact-us" href="#">Contact Us</a>
-      </nav>
+      <ul class="nav nav-preview d-none d-md-flex"  id="navbar">
+        <li class="me-3 py-2 nav-link"  href="#">What's New?</li>
+        <li class="me-3 py-2 nav-link" href="#">Services</li>
+        <li class="me-3 py-2 nav-link" href="#">About Us</li>
+      </ul>
+      <div class="form-inline"><a class="py-2 contact-us" id="contact-us" href="#">Contact Us</a>
+    </div>
     </div>
 
 </header>
@@ -139,7 +143,7 @@ print_r($result);
 
             </div>
           </div>
-          <button class="w-100 btn-block btn btn-primary btn-lg mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">Apply Now</button>
+          <button class="w-n-block btn  btn-lg mt-5" data-bs-toggle="modal" id="apply-now" data-bs-target="#exampleModal" type100 bt="submit">Apply Now</button>
 </div>
         </div>
       </div>
@@ -343,7 +347,7 @@ print_r($result);
         </div>
 
         <!-- Submit Button -->
-        <button class="btn btn-primary w-100" type="submit" name="apply_now">Apply Now</button>
+        <button class="btn  w-100" type="submit" id="apply-now" name="apply_now">Apply Now</button>
       </form>
     </div>
   </div>
@@ -389,7 +393,7 @@ print_r($result);
     <div class="col mb-3">
     </div>
     <div class="col mb-3">
-      <h5>Section</h5>
+      <h5>What's New</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
@@ -400,7 +404,7 @@ print_r($result);
     </div>
 
     <div class="col mb-3">
-      <h5>Section</h5>
+      <h5>About Us</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
@@ -411,7 +415,7 @@ print_r($result);
     </div>
 
     <div class="col mb-3">
-      <h5>Section</h5>
+      <h5>Contact Us</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
