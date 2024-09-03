@@ -68,3 +68,24 @@
     
 
 }
+
+
+.card-header{
+
+
+    background-color: var(--main-color );
+}
+
+
+
+#svg{
+
+      fill: var(--highlights-color);
+}
+
+
+.product-title{
+
+ color: var(--tertiary-color);
+
+}

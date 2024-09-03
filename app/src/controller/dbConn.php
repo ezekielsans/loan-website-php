@@ -3,7 +3,7 @@
 class DbConnection
 {
 
-    private $server = "mysql:host=db;dbname=email_server";
+    private $server = "mysql:host=db;dbname=loan_site";
     private $user = "admin";
     private $password = "password";
     private $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC);
@@ -52,7 +52,7 @@ class DbConnection
             $statement = $this->conn->prepare('INSERT INTO applicants(`first_name`, `last_name`, `email`, `contact_number`, `gender`) VALUES (?,?,?,?,?)');
             $statement->execute([$firstName, $lastName, $email, $contactNumber, $gender]);
           
-            echo "New record created successfully";
+           // echo "New record created successfully";
             header('Location: homepage.php');
         } catch (PDOException $e) {
 

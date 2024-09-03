@@ -2,7 +2,7 @@ services:
   db:
     image: mysql:latest
     environment:
-        - MYSQL_DATABASE=email_server
+        - MYSQL_DATABASE=loan_site
         - MYSQL_USER=admin
         - MYSQL_PASSWORD=password
         - MYSQL_ALLOW_EMPTY_PASSWORD=1
